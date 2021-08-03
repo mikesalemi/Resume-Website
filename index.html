@@ -38,33 +38,33 @@
             <h1>Get in touch...</h1>
             <div id="contactBox">
 
-                <form id="contactForm" action="http://httpbin.org/post" method="post" name="contact">
+                <form id="contactForm" action="http://httpbin.org/post" method="post" name="contact" data-netlify="true">
                     <table>
                         <tr>
                             <td>
                                 <label for="fname">First Name:</label>
-                                <input type="text" id="fname" name="fname" placeholder="Enter first name">
+                                <input type="text" id="fname" name="fname" placeholder="Enter first name" required>
                             </td>
                             <td>
                                 <label for="lname">Last Name:</label>
-                                <input type="text" id="lname" name="lname" placeholder="Enter last name">
+                                <input type="text" id="lname" name="lname" placeholder="Enter last name" required>
                             </td>
                         </tr>
                         <tr>
                             <td>
                                 <label for="city">City:</label>
-                                <input list="cities" id="city" name="city" placeholder="Type or select city">
+                                <input list="cities" id="city" name="city" placeholder="Type or select city" required>
                             </td>
                             <td>
                                 <label for="zip">Postal Code:</label>
                                 <input type="text" id="zip" name="zip" maxlength="7" size="7"
-                                       pattern="^[a-zA-Z][0-9][a-zA-Z] ?[0-9][a-zA-Z][0-9]$" placeholder="A1A 1A1">
+                                       pattern="^[a-zA-Z][0-9][a-zA-Z] ?[0-9][a-zA-Z][0-9]$" placeholder="A1A 1A1" required>
                             </td>
                         </tr>
                         <tr>
                             <td colspan="2">
                                 <label for="email">Email:</label>
-                                <input type="email" id="email" name="email" size="59" placeholder="john.doe@email.com">
+                                <input type="email" id="email" name="email" size="59" placeholder="john.doe@email.com" required>
                             </td>
                         </tr>
                         <tr>
@@ -76,14 +76,14 @@
                             <td align="right">
                                 <label class="question" for="question">Question:</label>
                                 <input type="radio" id="question" name="Reason" value="Question" value="Hiring"
-                                       onclick="showRateInput()">
+                                       onclick="showRateInput()" required>
                                 <br>
                                 <label class="typeID" for="comment">Comment:</label>
                                 <input type="radio" id="comment" name="Reason" value="Comment" value="Hiring"
-                                       onclick="showRateInput()">
+                                       onclick="showRateInput()" required>
                                 <br>
                                 <label class="typeID" for="hiring">Hiring:</label>
-                                <input type="radio" id="hiring" name="Reason" value="Hiring" onclick="showRateInput()">
+                                <input type="radio" id="hiring" name="Reason" value="Hiring" onclick="showRateInput()" required>
                             </td>
                             <td align="left">
                                 <br><br>
@@ -92,7 +92,7 @@
                                     $<input type="text" id="hourlyRate"
                                             name="Hourly Rate"
                                             placeholder="CAD"
-                                            pattern="^[0-9]+\.?[0-9]?[0-9]?$">
+                                            pattern="^[0-9]+\.?[0-9]?[0-9]?$" required>
                                 </div>
                             </td>
                         </tr>
@@ -100,7 +100,7 @@
                             <td colspan="3" id="messageArea">
                                 <textarea id="message" name="message" rows="15" cols="80"
                                           placeholder="Enter message here..."></textarea>
-                                <input type="submit" value="Submit">
+                                <input type="submit" value="Submit" required>
                                 <br>
                             </td>
                         </tr>
