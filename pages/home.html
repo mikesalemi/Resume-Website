@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Mike Salemi Developer | Home</title>
+        <link rel="stylesheet" href="../style/styling.css" type="text/css"/>
+    </head>
+    <body>
+        <div id="section_1">
+            <img src="../images/img.png" alt="Mike Salemi">
+            <h1 class="title">mike_Salemi</h1>
+            <h2 class="title"><span style="color: lightgrey">{</span><span
+                    style="color: mediumpurple">fullStack</span><span style="color: lightgrey">.</span><span
+                    style="color: orange">developer</span><span style="color: cornflowerblue">()</span><span
+                    style="color: lightgrey">}</span><span style="color: darkorange">;</span></h2>
+            <div>
+                <div id="buttons">
+                    <a id="download" href="../MichaelSalemi_Resume.pdf" download="MichaelSalemi_Resume.pdf">
+                        <button id="resume" type="button" onmouseover="showScrollForMore()"
+                                onmouseout="hideScrollForMore()">
+                            RESUME <img src="../images/download.png" alt="download">
+                        </button>
+                    </a>
+                    <a href="#section_2">
+                        <button id="contact" type="button" onclick="showContact()">
+                            CONTACT <img src="../images/email.png" alt="contact">
+                        </button>
+                    </a>
+                </div>
+                <div id="scrollForMore">
+                    <br>
+                    <h3>scroll for more</h3>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id="section_2">
+            <h1>Get in touch...</h1>
+            <div id="contactBox">
+
+                <form id="contactForm" action="http://httpbin.org/post" method="post" name="contact">
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="fname">First Name:</label>
+                                <input type="text" id="fname" name="fname" placeholder="Enter first name">
+                            </td>
+                            <td>
+                                <label for="lname">Last Name:</label>
+                                <input type="text" id="lname" name="lname" placeholder="Enter last name">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="city">City:</label>
+                                <input list="cities" id="city" name="city" placeholder="Type or select city">
+                            </td>
+                            <td>
+                                <label for="zip">Postal Code:</label>
+                                <input type="text" id="zip" name="zip" maxlength="7" size="7"
+                                       pattern="^[a-zA-Z][0-9][a-zA-Z] ?[0-9][a-zA-Z][0-9]$" placeholder="A1A 1A1">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" size="59" placeholder="john.doe@email.com">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td  align="right">
+                                Reason For contact:
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">
+                                <label class="question" for="question">Question:</label>
+                                <input type="radio" id="question" name="Reason" value="Question" value="Hiring"
+                                       onclick="showRateInput()">
+                                <br>
+                                <label class="typeID" for="comment">Comment:</label>
+                                <input type="radio" id="comment" name="Reason" value="Comment" value="Hiring"
+                                       onclick="showRateInput()">
+                                <br>
+                                <label class="typeID" for="hiring">Hiring:</label>
+                                <input type="radio" id="hiring" name="Reason" value="Hiring" onclick="showRateInput()">
+                            </td>
+                            <td align="left">
+                                <br><br>
+                                <div id="rateContainer">
+                                    <label for="hourlyRate">Hourly Rate:</label>
+                                    $<input type="text" id="hourlyRate"
+                                            name="Hourly Rate"
+                                            placeholder="CAD"
+                                            pattern="^[0-9]+\.?[0-9]?[0-9]?$">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" id="messageArea">
+                                <textarea id="message" name="message" rows="15" cols="80"
+                                          placeholder="Enter message here..."></textarea>
+                                <input type="submit" value="Submit">
+                                <br>
+                            </td>
+                        </tr>
+                    </table>
+                    <datalist id="cities">
+                        <option value="Brampton">
+                        <option value="Burnaby">
+                        <option value="Calgary">
+                        <option value="Edmonton">
+                        <option value="Gatineau">
+                        <option value="Halifax">
+                        <option value="Hamilton">
+                        <option value="Kitchener">
+                        <option value="Laval">
+                        <option value="London">
+                        <option value="Longueuil">
+                        <option value="Markham">
+                        <option value="Montreal">
+                        <option value="Ottawa">
+                        <option value="Mississauga">
+                        <option value="Quebec City">
+                        <option value="Regina">
+                        <option value="Saskatoon">
+                        <option value="Surrey">
+                        <option value="Toronto">
+                        <option value="Vancouver">
+                        <option value="Vaughan">
+                        <option value="Windsor">
+                        <option value="Winnipeg">
+                    </datalist>
+                    <br><br><br>
+
+                </form>
+                <input onclick="closeContact()" type="image" src="../images/cancel.png" id="closeContact">
+            </div>
+        </div>
+        <div id="section_3">
+            <div class="grid_cell" id="A1">
+                <div>
+                    <h2><span style="color: #ffe156">general</span><span style="color: lightgrey">() {</span></h2>
+                    <blockquote style="font-size: 15px"><h3>
+                        name <span style="color: lightgrey">=</span> Mike Salemi<span style="color: orange">;</span><br><br>
+                        location <span style="color: lightgrey">=</span> Toronto, Ontario<span
+                            style="color: orange">;</span><br><br>
+                        language <span style="color: lightgrey">=</span> English<span style="color: orange">;</span><br><br>
+                        email <span style="color: lightgrey">=</span> mike.salemi95@gmail.com<span
+                            style="color: orange">;</span><br><br>
+                        phone <span style="color: lightgrey">=</span> 647-703-2876<span style="color: orange">;</span>
+                    </h3>
+                    </blockquote>
+                    <h2><span style="color: lightgrey">}</span></h2>
+                </div>
+            </div>
+            <div class="grid_cell" id="A2">
+                <div>
+                    <h2>/************ <br> about</h2>
+                    I am an aspiring full-stack developer currently attending Seneca College in Toronto, Ontario.
+                    I have a passion for visual web design, but my true calling is backend development.
+                    <br><br>
+                    Rather than picking between the two options, I am working to become a full-stack developer
+                    so I may exercise my skills needed in both front-end and back-end development.
+                    <h2>************/</h2>
+                </div>
+            </div>
+            <div class="grid_cell" id="B1">
+                <div>
+                    <h2><span style="color: #ffe156">education</span><span style="color: lightgrey">() {</span></h2>
+                    <blockquote style="font-size: 15px">
+                        <h3>computer programming and analysis</h3>
+                        <blockquote>
+                            -advanced diploma <br>
+                            -seneca college: <br>
+                            (jan 2021 - dec 2022)
+                        </blockquote>
+                    </blockquote>
+                    <h2><span style="color: lightgrey">}</span></h2>
+                </div>
+            </div>
+            <div class="grid_cell" id="B2">
+                <div>
+                    <h2><span style="color: #ffe156">skills</span><span style="color: lightgrey">() {</span></h2>
+                    <blockquote style="font-size: 15px">
+                        <table id="skillsTable">
+                            <tr>
+                                <td>•java</td>
+                                <td>•CSS</td>
+                            </tr>
+                            <tr>
+                                <td>•Python3</td>
+                                <td>•Bash Scripting</td>
+                            </tr>
+                            <tr>
+                                <td>•C++</td>
+                                <td>•SQL</td>
+                            </tr>
+                            <tr>
+                                <td>•Node.JS</td>
+                                <td>•React</td>
+                            </tr>
+                            <tr>
+                                <td>•HTML</td>
+                            </tr>
+                        </table>
+                    </blockquote>
+                    <h2><span style="color: lightgrey">}</span></h2>
+                </div>
+            </div>
+        </div>
+        <script src="../functionality/buttonFunctions.js"></script>
+    </body>
+</html>
