@@ -28,14 +28,16 @@ function submitForm() {
     document.getElementById("contactForm").submit();
 }
 
-function showRateInput() {
+function radioOptions() {
     var rateDiv = document.getElementById("rateContainer");
-    var hiringSelect = document.getElementById("hiring");
     var rateInput = document.getElementById("hourlyRate");
-    if (hiringSelect.checked) {
+    if (document.getElementById("hiring").checked) {
         rateDiv.style.visibility = "visible";
         rateInput.required = true;
-    } else {
+    } else if (document.getElementById("question").checked){
+        rateDiv.style.visibility = "hidden";
+        rateInput.required = false;
+    } else if (document.getElementById("comment").checked) {
         rateDiv.style.visibility = "hidden";
         rateInput.required = false;
     }

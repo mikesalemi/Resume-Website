@@ -38,57 +38,68 @@
             <h1>Get in touch...</h1>
             <div id="contactBox">
 
-                <form id="contactForm" method="post" name="contact" data-netlify="true">
+                <form id="contactForm" action="http://httpbin.org/post" method="post" name="contact"
+                      data-netlify="true">
                     <table>
                         <tr>
                             <td>
-                                <label for="fname">First Name:</label>
+                                <label for="fname"><span style="color: red">*</span>First Name:</label>
                                 <input type="text" id="fname" name="fname" placeholder="Enter first name" required>
                             </td>
                             <td>
                                 <label for="lname">Last Name:</label>
-                                <input type="text" id="lname" name="lname" placeholder="Enter last name" required>
+                                <input type="text" id="lname" name="lname" placeholder="Enter last name">
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <label for="city">City:</label>
-                                <input list="cities" id="city" name="city" placeholder="Type or select city" required>
+                                <label for="city"><span style="color: red">*</span>City:</label>
+                                <input list="cities" id="city" name="city" placeholder="Type/select city" required>
                             </td>
                             <td>
                                 <label for="zip">Postal Code:</label>
                                 <input type="text" id="zip" name="zip" maxlength="7" size="7"
-                                       pattern="^[a-zA-Z][0-9][a-zA-Z] ?[0-9][a-zA-Z][0-9]$" placeholder="A1A 1A1" required>
+                                       pattern="^[a-zA-Z][0-9][a-zA-Z] ?[0-9][a-zA-Z][0-9]$" placeholder="A1A 1A1"
+                                       required>
                             </td>
                         </tr>
                         <tr>
                             <td colspan="2">
-                                <label for="email">Email:</label>
-                                <input type="email" id="email" name="email" size="59" placeholder="john.doe@email.com" required>
+                                <label for="province"><span style="color: red">*</span>Province/State:</label>
+                                <input list="provinces" id="province" name="province"
+                                       placeholder="Province/State" required>
                             </td>
                         </tr>
                         <tr>
-                            <td  align="right">
-                                Reason For contact:
+                            <td colspan="2">
+                                <label for="email"><span style="color: red">*</span>Email:</label>
+                                <input type="email" id="email" name="email" size="59" placeholder="john.doe@email.com"
+                                       required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">
+                                <span style="color: red">*</span>Reason For contact:
                             </td>
                         </tr>
                         <tr>
                             <td align="right">
                                 <label class="question" for="question">Question:</label>
                                 <input type="radio" id="question" name="Reason" value="Question" value="Hiring"
-                                       onclick="showRateInput()" required>
+                                       onclick="radioOptions()" required>
                                 <br>
                                 <label class="typeID" for="comment">Comment:</label>
                                 <input type="radio" id="comment" name="Reason" value="Comment" value="Hiring"
-                                       onclick="showRateInput()" required>
+                                       onclick="radioOptions()" required>
                                 <br>
                                 <label class="typeID" for="hiring">Hiring:</label>
-                                <input type="radio" id="hiring" name="Reason" value="Hiring" onclick="showRateInput()" required>
+                                <input type="radio" id="hiring" name="Reason" value="Hiring" onclick="radioOptions()"
+                                       required>
                             </td>
                             <td align="left">
                                 <br><br>
                                 <div id="rateContainer">
-                                    <label for="hourlyRate">Hourly Rate:</label>
+                                    <label for="hourlyRate"><span style="color: red">*</span>Hourly Rate:</label>
                                     $<input type="text" id="hourlyRate"
                                             name="Hourly Rate"
                                             placeholder="CAD"
@@ -98,6 +109,7 @@
                         </tr>
                         <tr>
                             <td colspan="3" id="messageArea">
+                                <p style="color: red">*</p>
                                 <textarea id="message" name="message" rows="15" cols="80"
                                           placeholder="Enter message here..."></textarea>
                                 <input type="submit" value="Submit" required>
@@ -130,6 +142,16 @@
                         <option value="Vaughan">
                         <option value="Windsor">
                         <option value="Winnipeg">
+                    </datalist>
+                    <datalist id="provinces">
+                        <option value="Ontario"></option>
+                        <option value="California"></option>
+                        <option value="Washington"></option>
+                        <option value="Quebec"></option>
+                        <option value="Alberta"></option>
+                        <option value="Vancouver"></option>
+                        <option value="New York"></option>
+                        <option value="Texas"></option>
                     </datalist>
                     <br><br><br>
 
