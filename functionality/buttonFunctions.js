@@ -24,10 +24,6 @@ function hideScrollForMore() {
     text.style.opacity = "0";
 }
 
-function submitForm() {
-    document.getElementById("contactForm").submit();
-}
-
 function radioOptions() {
     var rateDiv = document.getElementById("rateContainer");
     var rateInput = document.getElementById("hourlyRate");
