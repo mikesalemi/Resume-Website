@@ -18,7 +18,7 @@
                     <a id="download" href="downloads/MichaelSalemi_Resume.pdf" download="MichaelSalemi_Resume.pdf">
                         <button id="resume" type="button" onmouseover="showScrollForMore()"
                                 onmouseout="hideScrollForMore()">
-                            RESUME <img src="images/download.png" alt="download">
+                            RESUMÉ <img src="images/download.png" alt="download">
                         </button>
                     </a>
                     <a href="#section_2">
@@ -43,7 +43,7 @@
                     <table>
                         <tr>
                             <td>
-                                <label for="fname"><span style="color: red">*</span>First Name:</label>
+                                <label for="fname"><span style="color: red" class="asterisk">*</span>First Name:</label>
                                 <input type="text" id="fname" name="fname" placeholder="Enter first name" required>
                             </td>
                             <td>
@@ -53,7 +53,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <label for="city"><span style="color: red">*</span>City:</label>
+                                <label for="city"><span style="color: red" class="asterisk">*</span>City:</label>
                                 <input list="cities" id="city" name="city" placeholder="Type/select city" required>
                             </td>
                             <td>
@@ -64,21 +64,21 @@
                         </tr>
                         <tr>
                             <td colspan="2">
-                                <label for="province"><span style="color: red">*</span>Province/State:</label>
+                                <label for="province"><span style="color: red" class="asterisk">*</span>Province/State:</label>
                                 <input list="provinces" id="province" name="province"
                                        placeholder="Province/State" required>
                             </td>
                         </tr>
                         <tr>
                             <td colspan="2">
-                                <label for="email"><span style="color: red">*</span>Email:</label>
+                                <label for="email"><span style="color: red" class="asterisk">*</span>Email:</label>
                                 <input type="email" id="email" name="email" size="59" placeholder="john.doe@email.com"
                                        required>
                             </td>
                         </tr>
                         <tr>
                             <td align="right">
-                                <span style="color: red">*</span>Reason For contact:
+                                <span style="color: red" class="asterisk">*</span>Reason For contact:
                             </td>
                         </tr>
                         <tr>
@@ -98,20 +98,21 @@
                             <td align="left">
                                 <br><br>
                                 <div id="rateContainer">
-                                    <label for="hourlyRate"><span style="color: red">*</span>Hourly Rate:</label>
+                                    <label for="hourlyRate"><span style="color: red" class="asterisk">*</span>Hourly Rate:</label>
                                     $<input type="text" id="hourlyRate"
                                             name="Hourly Rate"
                                             placeholder="CAD"
+                                            size="10"
                                             pattern="^[0-9]+\.?[0-9]?[0-9]?$" required>
                                 </div>
                             </td>
                         </tr>
                         <tr>
                             <td colspan="3" id="messageArea">
-                                <p style="color: red">*</p>
-                                <textarea id="message" name="message" rows="15" cols="80"
+                                <p style="color: red" class="asterisk">*</p>
+                                <textarea id="message" name="message" rows="8" cols="60"
                                           placeholder="Enter message here..."></textarea>
-                                <input type="submit" value="Submit" required>
+                                <input onclick="submitForm()" type="button" value="submit" id="submit">
                                 <br>
                             </td>
                         </tr>

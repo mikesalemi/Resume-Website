@@ -14,7 +14,7 @@ body {
     flex-flow: row wrap;
     justify-content: space-around;
     background-color: #110f1c;
-    font-family: "PT Mono";
+    font-family: 'Courier New', monospace;
     color: lawngreen;
 }
 
@@ -22,12 +22,15 @@ body > div {
     width: 90%;
     background-color: #110f1c;
     max-width: 1100px;
+    min-height: 750px;
     margin-bottom: auto;
     height: 100vh;
 }
 
 #section_1 > img {
+    width: 30%;
     max-width: 40%;
+    min-width: 20%;
     border: solid black 15px;
     align-self: center;
     border-radius: 50%;
@@ -35,6 +38,8 @@ body > div {
 
 #section_1 {
     display: flex;
+    min-height:590px;
+    min-width: 800px;
     flex-flow: column;
     justify-content: center;
     align-content: center;
@@ -42,13 +47,12 @@ body > div {
 }
 
 .title {
-    font-family: "PT Mono";
     color: lawngreen;
 }
 
 #buttons {
     display: flex;
-    padding: 0px 30%;
+    padding: 0 30%;
     justify-content: space-evenly;
 }
 
@@ -65,7 +69,6 @@ body > div {
     width: 150px;
     border: 0px;
     box-shadow: 2px 2px 12px black;
-    font-family: "PT Mono";
     font-size: 20px;
     outline: none;
 }
@@ -120,7 +123,14 @@ button > img {
     border-radius: 50%;
 }
 
+#section_2 > h1 {
+    margin: 0;
+    padding-left: 20%;
+    z-index: 2;
+}
+
 #contactBox {
+    z-index: 1;
     display: flex;
     flex-flow: column;
     min-height:590px;
@@ -167,6 +177,14 @@ textarea {
     box-shadow: 0 0 12px red;
 }
 
+input {
+    font-size: 15px;
+}
+
+#message {
+    font-size: 15px;
+}
+
 #rateContainer {
     visibility: hidden;
     display: flex;
@@ -174,9 +192,36 @@ textarea {
     padding-right: 10%;
 }
 
+.asterisk {
+    margin: 0;
+}
+
 #closeContact:active {
     transition: 0s;
     background-color: red;
+}
+
+#submit {
+    background-color: inherit;
+    color: mediumblue;
+    margin-left: 40px;
+    border-radius: 15px;
+    padding: 5px;
+    width: 100px;
+    border: solid mediumblue 5px;
+    font-size: 20px;
+    outline: none;
+}
+
+#submit:hover {
+    transition: 0.1s ease-in-out;
+    transform: scale(1.2);
+    box-shadow: 0 0 12px black;
+}
+
+#submit:active {
+    transition: 0.1s ease-in-out;
+    transform: scale(0.8);
 }
 
 /**********
@@ -185,7 +230,6 @@ textarea {
 ***********/
 
 #section_3 {
-    /*background-color: azure;*/
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
